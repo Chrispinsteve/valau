@@ -23,8 +23,6 @@ export default function BookingPage() {
           </p>
         </div>
       </section>
-
-      <BookingFlow />
     </>
   )
 }
