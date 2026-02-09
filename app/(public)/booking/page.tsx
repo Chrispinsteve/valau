@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Suspense } from "react"
 import { BookingFlow } from "@/components/booking/booking-flow"
 
 export const metadata: Metadata = {
@@ -23,6 +24,10 @@ export default function BookingPage() {
           </p>
         </div>
       </section>
+
+      <Suspense fallback={null}>
+        <BookingFlow />
+      </Suspense>
     </>
   )
 }
