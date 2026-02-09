@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Suspense } from "react"
 import { ServicesContent } from "@/components/services/services-content"
 
 export const metadata: Metadata = {
@@ -25,7 +26,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <ServicesContent />
+      <Suspense fallback={null}>
+        <ServicesContent />
+      </Suspense>
     </>
   )
 }
