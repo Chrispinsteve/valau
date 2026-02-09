@@ -125,7 +125,7 @@ export const services: Service[] = [
       "Natural-looking individual lash extensions applied one-by-one for a subtle yet stunning enhancement.",
     duration: 90,
     price: 180,
-    image: "/images/services-facial.jpg",
+    image: "/images/services-lash.jpg",
   },
   {
     id: "brow-wax",
@@ -135,7 +135,7 @@ export const services: Service[] = [
       "Expert brow shaping using precision waxing and trimming to frame your face beautifully.",
     duration: 20,
     price: 35,
-    image: "/images/services-facial.jpg",
+    image: "/images/services-waxing.jpg",
   },
 ]
 
