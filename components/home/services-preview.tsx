@@ -50,7 +50,16 @@ export function ServicesPreview() {
                     loop
                     muted
                     playsInline
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    preload="auto"
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                    }}
+                    className="transition-transform duration-700 group-hover:scale-105"
                   />
                 ) : (
                   <Image
