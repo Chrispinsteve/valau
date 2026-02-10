@@ -5,7 +5,7 @@ const featured = [
   {
     title: "Facials",
     description: "Customized treatments that restore your skin's natural radiance and vitality.",
-    image: "/images/services-facial.jpg",
+    image: "/images/services-facial.mp4",
     href: "/services?category=facial",
   },
   {
@@ -43,12 +43,23 @@ export function ServicesPreview() {
               className="group block"
             >
               <div className="relative aspect-[3/4] overflow-hidden mb-6">
-                <Image
-                  src={item.image || "/placeholder.svg"}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                {item.image?.endsWith('.mp4') ? (
+                  <video
+                    src={item.image}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <Image
+                    src={item.image || "/placeholder.svg"}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                )}
               </div>
               <h3 className="font-serif text-xl mb-2 text-foreground">{item.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
